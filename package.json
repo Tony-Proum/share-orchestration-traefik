@@ -1,0 +1,42 @@
+{
+  "name": "share-orchestration-traefik",
+  "version": "1.0.0",
+  "description": "presentation of docker orchestrations ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server -d --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tony-Proum/share-orchestration-traefik.git"
+  },
+  "keywords": [
+    "docker",
+    "kubernetes",
+    "traefik"
+  ],
+  "author": "Tony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tony-Proum/share-orchestration-traefik/issues"
+  },
+  "homepage": "https://github.com/Tony-Proum/share-orchestration-traefik#readme",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.24.1",
+    "jshint": "^2.9.4",
+    "jshint-loader": "^0.8.3",
+    "node-sass": "^3.13.0",
+    "path": "^0.12.7",
+    "purifycss-webpack-plugin": "^2.0.3",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "reveal.js": "^3.3.0"
+  }
+}
