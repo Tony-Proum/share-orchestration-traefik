@@ -2,9 +2,17 @@
 
     'use strict';
 
-    require('../node_modules/reveal.js/css/reveal.scss');
+    var HighLight = require('highlight.js');
+    var Utils = require('./lib/utils');
     var Reveal = require('reveal.js');
+    require('./style.scss');
 
-    Reveal.initialize();
+    Reveal.initialize({
+        transition:'slide',
+        backgroundTransition:'zoom'
+    });
+    HighLight.initHighlightingOnLoad();
+
+    module.exports = Utils;
 
 })();

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server -d --color"
+    "start": "webpack-dev-server --inline --color",
+    "build": "webpack -p --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/Tony-Proum/share-orchestration-traefik#readme",
   "devDependencies": {
     "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
     "jshint": "^2.9.4",
@@ -37,6 +39,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "highlight.js": "^9.8.0",
     "reveal.js": "^3.3.0"
   }
 }

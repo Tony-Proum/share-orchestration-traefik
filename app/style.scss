@@ -1,3 +1,27 @@
-.test{
-  color : red;
+@import "../node_modules/reveal.js/css/reveal.css";
+@import "../node_modules/reveal.js/css/theme/league.css";
+@import "../node_modules/highlight.js/styles/darcula.css";
+
+$boxHeight : 15em;
+$highLightColor : #13DAEC;
+
+pre {
+  box-shadow: none !important;
+  & code {
+    height: $boxHeight * 2;
+  }
+}
+
+img {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  height: $boxHeight;
+}
+
+.idea {
+  cursor:  pointer;
+  & h2 {
+    color : $highLightColor;
+  }
 }

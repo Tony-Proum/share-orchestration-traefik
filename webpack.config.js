@@ -1,17 +1,20 @@
-var webpack = require("webpack");
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require("path");
-var purify = require("purifycss-webpack-plugin");
+var path = require('path');
+var purify = require('purifycss-webpack-plugin');
 
 module.exports = {
-    entry: "./app/main.js",
+    entry: ['./app/main.js'],
     output: {
-        path: __dirname + '/build',
-        filename: '/build/main.js'
+        path: path.join(__dirname, '/lib'),
+        filename: '[name].js',
+        library: 'Utils',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     resolve: {
         extensions: ['', '.js'],
-        modulesDirectories: ['./node_modules']
+        modulesDirectories: ['app', 'node_modules']
     },
     module: {
         loaders: [
@@ -25,20 +28,23 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: "style-loader!css-loader!sass-loader?outputStyle=expanded&includePaths[]=" + __dirname + '/app/css'
+                loader: 'style-loader!css-loader!sass-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader?outputStyle'
             }
         ],
         preLoaders: [
             {
                 test: /\.js$/,
-                include: pathToRegExp(path.join(__dirname, "app")),
-                loader: "jshint-loader"
+                include: pathToRegExp(path.join(__dirname, 'app')),
+                loader: 'jshint-loader'
             }
         ]
     },
     amd: {jQuery: true},
     plugins: [
-        new webpack.optimize.LimitChunkCountPlugin({maxChunks: 20}),
         new HtmlWebpackPlugin({
             template: 'app/index.html'
         }),
@@ -50,12 +56,12 @@ module.exports = {
         })
     ],
     sassLoader: {
-        includePaths: [path.resolve(__dirname, "node_modules")]
+        includePaths: [path.resolve(__dirname, 'node_modules')]
     }
 };
 function escapeRegExpString(str) {
-    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 }
 function pathToRegExp(p) {
-    return new RegExp("^" + escapeRegExpString(p));
+    return new RegExp('^' + escapeRegExpString(p));
 }
