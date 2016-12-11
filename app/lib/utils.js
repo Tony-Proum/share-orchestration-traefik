@@ -5,8 +5,8 @@
     var Reveal = require('reveal.js');
 
     module.exports = {
-        goToSlide: function () {
-            Reveal.slide(2);
+        goToSlide: function (number) {
+            Reveal.slide(number);
         }
     };
 
