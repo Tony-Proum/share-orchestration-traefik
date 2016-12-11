@@ -61,10 +61,24 @@
         <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">
             <h2>
-                Deploy application
+                Build application
             </h2>
             <img src="/app/images/traevis.png" width="40%">
             <img src="/app/images/jenkins.png" width="40%">
+        </section>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>
+                Deploy application
+            </h2>
+            <pre>
+                <code>
+                    wget "http://bintray.com/myapp/release/\
+                    download_file?release%2Fmyapp-1.0.0-SNAPSHOT.zip"
+                    unzip myapp-1.0.0-SNAPSHOT.zip /data/www/
+                    nginx -s reload
+                </code>
+            </pre>
         </section>
         <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">

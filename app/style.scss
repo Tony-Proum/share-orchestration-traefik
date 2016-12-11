@@ -7,8 +7,11 @@ $highLightColor : #13DAEC;
 
 pre {
   box-shadow: none !important;
+  margin : 2em 0 !important;
+  width : auto !important;
   & code {
     height: $boxHeight * 2;
+    width : 100% !important;
   }
 }
 
