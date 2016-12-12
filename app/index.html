@@ -24,7 +24,11 @@
             <h2>
                 The beginning
             </h2>
-            <img src="/app/images/stoneAge.png">
+            <p>How to create an App</p>
+        </section>
+        <section>
+            <h2>Monolith App</h2>
+            <img src="/app/images/monolith.jpg">
         </section>
         <section id="write-code" data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">
@@ -32,13 +36,29 @@
                 Write code
             </h2>
             <pre>
-                <code class="javascript">
-                    function myAwesomeNewFeature(){
-                        console.log('this will be awesome');
-                        return 'Awesome !';
+                <code class="java">
+                    public String myAwesomeNewFeature(){
+                        LOGGER.debug("Wow this will be awesome");
+                        return "Awesome !";
                     }
                 </code>
             </pre>
+        </section>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>Build packages locally</h2>
+            <ul>
+                <li>maven</li>
+                <li>npm</li>
+            </ul>
+        </section>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>
+                Build package for deployment
+            </h2>
+            <img src="/app/images/traevis.png" width="40%">
+            <img src="/app/images/jenkins.png" width="40%">
         </section>
         <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">
@@ -61,14 +81,6 @@
         <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">
             <h2>
-                Build application
-            </h2>
-            <img src="/app/images/traevis.png" width="40%">
-            <img src="/app/images/jenkins.png" width="40%">
-        </section>
-        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
-                 data-background-position="bottom left">
-            <h2>
                 Deploy application
             </h2>
             <pre>
@@ -80,20 +92,27 @@
                 </code>
             </pre>
         </section>
-        <section>
-            <div  class="idea" onclick="Utils.goToSlide(Math.floor(Math.random() * 4) + 2)">
-                <h2>
-                    Quality checks
-                </h2>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <div onclick="Utils.goToSlide(Math.floor(Math.random() * 5)+3);">
+                <h2>Quality checks</h2>
+                <img src="/app/images/monolithFail.gif">
             </div>
         </section>
         <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">
-            <div  class="idea" onclick="Utils.goToSlide(2)">
-                <h2>
-                    New Feature ?
-                </h2>
-            </div>
+            <h2>Quality checks</h2>
+            <pre>
+                <code>
+            Utils.goToStep(Math.floor(Math.random() * numberOfStep));
+                </code>
+            </pre>
+        </section>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>What's happen ?
+            </h2>
+            <img src="/app/images/plumbing.png">
         </section>
         <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">
@@ -110,15 +129,28 @@
                 <li>Focus on valuable work</li>
             </ul>
         </section>
-        <section>
-            <h2>Containers</h2>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>Containers & Microservices</h2>
             <img src="/app/images/container-c.jpg">
         </section>
-        <section>
+        <section data-transition="none" data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
             <h2>One package</h2>
-            <img src="/app/images/container.png">
+            <img src="/app/images/createContainer.png">
         </section>
-        <section>
+        <section data-transition="none" data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>One package</h2>
+            <img src="/app/images/createContainer2.png">
+        </section>
+        <section data-transition="none" data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>One package</h2>
+            <img src="/app/images/createContainer3.png">
+        </section>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
             <h2>Deployed on multiples environment</h2>
             <ul>
                 <li>Deliver heterogeneous packages</li>
