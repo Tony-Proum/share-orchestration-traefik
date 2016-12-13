@@ -7,9 +7,9 @@ $highLightColor : #13DAEC;
 
 pre {
   box-shadow: none !important;
-  margin : 2em 0 !important;
+  margin : 2em 0 0 !important;
   width : auto !important;
-  & code {
+  & code:not(.tiny) {
     height: $boxHeight * 2;
     width : 100% !important;
   }
@@ -19,7 +19,9 @@ img {
   border: none !important;
   background-color: transparent !important;
   box-shadow: none !important;
-  height: $boxHeight;
+  &:not(.tiny){
+    height: $boxHeight;
+  }
 }
 
 .idea {
