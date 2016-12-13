@@ -216,13 +216,23 @@
             <h2>Orchestration</h2>
             <pre>
                 <code>
-
+                    services:
+                        frontend:
+                            build: ./frontend
+                            image: cheztone/traefik-demo-front
+                            expose:
+                            - "80"
+                            links:
+                            - backend
+                        backend:
+                            build: ./backend
+                            image: cheztone/traefik-demo-back
+                            links:
+                            - database
+                        database:
+                            ...
                 </code>
             </pre>
-        </section>
-        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
-                 data-background-position="bottom left">
-            <h2>Orchestration</h2>
         </section>
         <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
                  data-background-position="bottom left">
@@ -231,6 +241,11 @@
                 <li>Deliver heterogeneous packages</li>
                 <li>Keep the same behaviors across multiple environment (Dev/Int/Prod)</li>
             </ul>
+        </section>
+        <section data-background-image="./app/images/logo-sfeir.svg" data-background-size="5em"
+                 data-background-position="bottom left">
+            <h2>Orchestration</h2>
+            <img src="/app/images/yesWeDidIt.jpg">
         </section>
     </div>
 </div>
